@@ -10,7 +10,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f4f4f4;
+  background-color: #fdfceb;
 }
 .profileCard {
   display: flex;
@@ -18,19 +18,32 @@ body {
   align-items: center;
   background-color: white;
   border-radius: 25px;
-  max-width: 600px;
+  max-width: 500px;
   width: 100%;
   padding: 30px;
+  position: relative;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.profileCard::before {
+  content: "";
+  background-color: #512da8;
+  height: 36%;
+  top: 0px;
+  width: 100%;
+  position: absolute;
+  border-radius: 25px 25px 0px 0px;
 }
 
 .image {
-  background-color: blue;
+  background-color: #512da8;
   display: flex;
   justify-content: center;
   align-items: center;
   max-width: 320px;
   padding: 8px;
   border-radius: 50%;
+  position: relative;
 }
 
 .profileImage {
@@ -77,7 +90,43 @@ body {
   color: white;
 }
 
+.link:hover {
+  opacity: 75%;
+}
 a {
   text-align: center;
   font-size: 30px;
+}
+
+.showOff {
+  margin-top: 30px;
+}
+
+#views {
+  padding-left: 20px;
+  padding-right: 40px;
+  font-size: 20px;
+  border-right: 2px solid grey;
+}
+
+#views:last-child {
+  border: none;
+}
+
+button {
+  margin-top: 20px;
+  height: 45px;
+  width: 190px;
+  font-size: 18px;
+  border-radius: 25px;
+  background-color: #512da8;
+  color: white;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 75%;
 }
